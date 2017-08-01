@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    android:orientation="vertical" >
+
+    <!-- 显示头部标题 -->
+
+    <LinearLayout
+        android:id="@+id/headLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/header" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/page_bottom"
+        android:paddingLeft="@dimen/page_left"
+        android:paddingRight="@dimen/page_right"
+        android:paddingTop="@dimen/page_top" >
+
+        <LinearLayout
+            android:id="@+id/one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/text_line"
+            android:paddingLeft="@dimen/page_small" >
+
+            <com.nangua.xiaomanjflc.widget.FontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                
+                android:text="账户余额："
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_app" />
+
+            <com.nangua.xiaomanjflc.widget.FontTextView
+                android:id="@+id/balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                
+                android:textColor="@color/app_orange"
+                android:textSize="@dimen/font_app" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/one"
+            android:layout_marginTop="@dimen/text_line"
+            android:background="@drawable/edit_gray"
+            android:paddingLeft="@dimen/page_small" >
+
+            <com.nangua.xiaomanjflc.widget.FontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                
+                android:text="充值金额："
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_app" />
+
+            <EditText
+                android:id="@+id/price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@null"
+                android:hint="充值金额≥100元"
+                android:inputType="numberDecimal"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/font_hint"
+                android:textSize="@dimen/font_app" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/thr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/two"
+            android:layout_marginTop="@dimen/text_line"
+            android:background="@drawable/edit_gray"
+            android:paddingLeft="@dimen/page_small"
+            android:visibility="gone" >
+           
+            <com.nangua.xiaomanjflc.widget.FontTextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="选择银行："
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_app" />
+
+            <Spinner
+                android:id="@+id/bankCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+        
+ <com.nangua.xiaomanjflc.widget.FontTextView
+            android:id="@+id/charge"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft = "20dp"
+            android:layout_marginRight = "20dp"
+            android:layout_below="@id/thr"
+            android:layout_marginTop="@dimen/component_btn_v2"
+            
+            android:background="@drawable/btn_blue"
+            android:gravity="center"
+            android:text="@string/charge_confirm"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_title" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical" >
+
+            <com.nangua.xiaomanjflc.widget.FontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                
+                android:drawablePadding="@dimen/text_drawable"
+                android:drawableRight="@drawable/yibao"
+                android:text="第三方合作平台充值渠道："
+                android:textColor="@color/font_gray"
+                android:textSize="@dimen/font_small" />
+
+            <com.nangua.xiaomanjflc.widget.FontTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_line"
+                
+                android:text="温馨提示："
+                android:textColor="@color/app_orange"
+                android:textSize="@dimen/font_hint" />
+
+            <com.nangua.xiaomanjflc.widget.FontTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                
+                android:text="1.个人充值最低100元起，免手续费。首次投资理财达1万元以上，需通过平台身份证审核（仅首次）；"
+                android:textColor="@color/font_gray"
+                android:textSize="@dimen/font_small" />
+
+            <com.nangua.xiaomanjflc.widget.FontTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                
+                android:text="2.企业充值金额无限制，单笔手续费10元；"
+                android:textColor="@color/font_gray"
+                android:textSize="@dimen/font_small" />
+
+            <com.nangua.xiaomanjflc.widget.FontTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                
+                android:text="3.为遵守国家反洗钱和套现行为的相关法律规定，小满金服平台不支持信用卡充值；"
+                android:textColor="@color/font_gray"
+                android:textSize="@dimen/font_small" />
+
+            <com.nangua.xiaomanjflc.widget.FontTextView
+                android:id="@+id/supportTel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                
+                android:text="4.在充值过程如遇任何问题，请联系小满金服客服400-178-5558。"
+                android:textColor="@color/font_gray"
+                android:textSize="@dimen/font_small" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

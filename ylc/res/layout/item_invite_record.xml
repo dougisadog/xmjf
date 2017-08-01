@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/text_line"
+    android:paddingLeft="@dimen/page_left"
+    android:paddingRight="@dimen/page_right"
+    android:paddingTop="@dimen/text_line" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <com.nangua.xiaomanjflc.widget.FontTextView
+            android:id="@+id/name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            
+            android:text="王海"
+            android:textColor="@color/font_black"
+            android:textSize="@dimen/font_app" />
+
+
+        <com.nangua.xiaomanjflc.widget.FontTextView
+            android:id="@+id/date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            
+            android:text="返还时间"
+            android:textColor="@color/font_black"
+            android:textSize="@dimen/font_app" />
+    </LinearLayout>
+    
+  <!-- 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="@dimen/text_line"
+        android:layout_marginTop="@dimen/text_line"
+        android:background="@color/app_bg" />
+   
+  
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <com.nangua.xiaomanjflc.view.FontTextView
+            android:id="@+id/type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            
+            android:text="邀请注册"
+            android:textColor="@color/red"
+            android:textSize="@dimen/font_app" />
+
+        <com.nangua.xiaomanjflc.view.FontTextView
+            android:id="@+id/desc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            
+            android:gravity="center"
+            android:text="10元现金券"
+            android:textColor="@color/red"
+            android:textSize="@dimen/font_app" />
+
+        <com.nangua.xiaomanjflc.view.FontTextView
+            android:id="@+id/date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            
+            android:gravity="center"
+            android:text="2015-08-15"
+            android:textColor="@color/red"
+            android:textSize="@dimen/font_app" />
+    </LinearLayout>
+    -->
+
+</LinearLayout>

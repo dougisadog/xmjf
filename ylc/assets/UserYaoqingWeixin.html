@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<title wicket:id="title" id="title"></title>
+
+<link rel="stylesheet" type="text/css" href="http://www.xiaomanjf.com/static/css/invite.css?1" />
+<script type="text/javascript" src="http://www.xiaomanjf.com/static/js/qrcode.js?1"></script>
+</head>
+<body wicket:id="body" id="body">
+<div class="pd-20">
+    <script>
+/*<![CDATA[*/
+		
+        var phoneScale = parseFloat(window.screen.width)/750;
+        if(phoneScale>1) phoneScale = 1;
+        document.write('<meta name="viewport" content="width=750,target-densitydpi=device-dpi,minimum-scale = '+ phoneScale +', maximum-scale = '+ phoneScale +',user-scalable=no">');
+    
+/*]]>*/
+</script>
+<style>
+/*<![CDATA[*/
+
+    .weixin_01 {
+        border: 1px solid #ccc;
+        width: 310px;
+        height: 50px;
+        line-height: 50px!important;
+        padding: 0 5px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        background-color: #8fe55b!important;
+
+    }
+    .xm_weixinerweima img {
+        display: block;
+        width: 500px;
+        height: 500px;
+        overflow: hidden;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+    .main_weixinbg {
+        background-image: url(http://www.xiaomanjf.com/static/images/img/headbg_yaoqing.jpg) !important;
+        background-size: 100% 100%;
+        height: 271px;
+        position: relative;
+        width: 750px;
+        margin: 0 auto;
+    }
+    .m-ft {background: #fffcf2!important;}
+    .weixin_02{
+        border: 1px solid #ccc;
+        width: 750px;
+        line-height: 50px!important;
+        padding: 0 5px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        word-wrap: break-word;
+        min-height:50px; height:auto!important; height:300px;
+    }
+    .weixin_03{
+        border: 1px solid #ccc;
+        width: 310px;
+        height: 50px;
+        line-height: 50px!important;
+        padding: 0 5px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        background-color: #8fe55b;
+    }
+    .copyBtn{
+        width: 167px;
+        height: 30px;
+        background: url(http://www.xiaomanjf.com/static/images/playground/copylink.png)!important;
+        /*margin-left: 82px;*/
+        margin-top: 13px;
+        display: block;
+        margin: 20px auto;
+    }
+    .wayTitle{
+        position: relative;
+        width: 100%;
+        font-size: 16px;
+        color: #262626;
+    }
+
+/*]]>*/
+</style>
+<div class="main_weixinbg"></div>
+<div class="main">
+    <div class="m-ft" style="height: auto;"  >
+        <div>
+            <p href="javascript:void(0);" wicket:id="wxshare" class="wechat2" id="wxshare2"><span class="weixin_03">我的邀请二维码 </span></p>
+        </div>
+        <div wicket:id="sm" class="cz j-view" id="sm" style="display:block;">
+            <div class="cz_title">
+                <div class="cz_title_right close" wicket:id="smClose" id="smClose1"></div>
+            </div>
+            <div class="cz_tishi fontsize3 fontcolor3 xm_weixinerweima">
+            <span wicket:id="conQrcode" id="conQrcode">
+                <script type="text/javascript">
+                
+                function doPicCreate(baseUrl, refcode, width) {
+              	  var qr = qrcode(10, 'H');
+              	  //qr.addData(baseUrl + '/invite?refCodeParam=' + refcode);
+              	  qr.addData(baseUrl)
+              	  qr.make();
+              	  var dom=document.createElement('DIV');
+              	  dom.innerHTML = qr.createImgTag();
+              	  var element=document.getElementById('conQrcode');
+              	  element.appendChild(dom);
+                  //var elementCode =document.getElementById('refcode');
+                  //elementCode.innerHTML= refcode;
+                  
+					var phoneScale = parseFloat(width)/750;
+			        if(phoneScale>1) phoneScale = 1;
+			        
+			        //var elementCode = document.getElementsByClassName('main_weixinbg')
+		             //elementCode[0].style.width =  width + "px";
+
+		             //var h = 271 * phoneScale;
+		             //elementCode[0].style.height = h + "px";
+		             
+			        var i = document.getElementsByName("viewport");
+			        i[0]["content"] = "width=750,target-densitydpi=device-dpi,minimum-scale = " + phoneScale + ", maximum-scale = " + phoneScale + ",user-scalable=no";					
+               }
+                
+ 
+
+</script>
+
+            </span>
+            </div>
+        </div>
+    </div>
+    <div class="rule" style="height: auto;">
+        <p style="font-size: 26px; line-height: 50px;">邀请好友注册奖励规则：<br/>
+            1.即日起成功邀请好友注册，您和好友均可获10元现金券。<br/>
+            现金券使用规则：<br/>
+            1.现金券使用时间：自收到现金券6个月内有效；<br/>
+            2.现金券可抵投资金额（投资金额大于等于1000元可用），不可提现，每张现金券仅可使用一次。<br/>
+            3.小满金服保留该活动的所有解释权。</p>
+    </div>
+</div>
+</div>
+
+</body>
+</html>

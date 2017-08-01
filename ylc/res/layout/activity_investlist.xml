@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <!-- 显示头部标题 -->
+
+    <LinearLayout
+        android:id="@+id/headLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/header" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/headLinear"
+        android:background="@color/app_bg"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/invest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/text_small_line_v2"
+            android:background="@color/white"
+            android:paddingBottom="10dp"
+            android:paddingLeft="@dimen/page_left_v2"
+            android:paddingRight="@dimen/page_right_v2"
+            android:paddingTop="10dp" >
+
+            <com.nangua.xiaomanjflc.widget.FontTextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:gravity="center"
+                android:text="我的投资"
+                android:textColor="@color/black_v2"
+                android:textSize="@dimen/font_title" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:contentDescription="@null"
+                android:gravity="center_vertical"
+                android:src="@drawable/account_goto" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/trans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/text_small_line_v2"
+            android:background="@color/white"
+            android:paddingBottom="10dp"
+            android:paddingLeft="@dimen/page_left_v2"
+            android:paddingRight="@dimen/page_right_v2"
+            android:paddingTop="10dp" >
+
+            <com.nangua.xiaomanjflc.widget.FontTextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:drawablePadding="@dimen/text_drawable_account"
+                android:gravity="center_vertical"
+                android:text="交易记录"
+                android:textColor="@color/black_v2"
+                android:textSize="@dimen/font_title" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:contentDescription="@null"
+                android:gravity="center_vertical"
+                android:src="@drawable/account_goto" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

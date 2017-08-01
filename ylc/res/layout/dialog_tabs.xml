@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/searchContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/grey"
+    android:orientation="vertical"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white" >
+
+            <com.nangua.xiaomanjflc.widget.FontTextView 
+                android:id="@+id/limitTimeTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingLeft="10dp"
+                android:textColor="@color/grey_btn"
+                android:text="期限" />
+
+            <GridView
+                android:id="@+id/limitTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:listSelector="@null"
+                android:layout_below="@+id/limitTimeTitle"
+                android:horizontalSpacing="15dp"
+                android:numColumns="4"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="10dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <com.nangua.xiaomanjflc.widget.FontTextView 
+                android:id="@+id/gainTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:textColor="@color/grey_btn"
+                android:text="收益率" />
+
+            <GridView
+                android:id="@+id/gain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:listSelector="@null"
+                android:layout_below="@+id/gainTitle"
+                android:horizontalSpacing="15dp"
+                android:numColumns="4"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="10dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <com.nangua.xiaomanjflc.widget.FontTextView 
+                android:id="@+id/repayMethodTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:textColor="@color/grey_btn"
+                android:text="还款方式" />
+
+            <GridView
+                android:id="@+id/repayMethod"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:listSelector="@null"
+                android:layout_below="@+id/repayMethodTitle"
+                android:horizontalSpacing="15dp"
+                android:numColumns="4"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="10dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/singlePurchaseTitleRl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <com.nangua.xiaomanjflc.widget.FontTextView 
+                android:id="@+id/singlePurchaseTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:textColor="@color/grey_btn"
+                android:text="起投金额" />
+
+            <GridView
+                android:id="@+id/singlePurchase"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:listSelector="@null"
+                android:layout_below="@+id/singlePurchaseTitle"
+                android:horizontalSpacing="15dp"
+                android:numColumns="4"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="10dp" />
+        </RelativeLayout>
+        
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="@dimen/page_line_btn"
+            android:orientation="horizontal" >
+
+            <View
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/confirm"
+                android:layout_width="0dip"
+                android:layout_height="40dp"
+                android:layout_weight="8"
+                android:background="@drawable/btn_blue"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:text="确定"
+                android:textColor="@color/white" />
+
+            <View
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

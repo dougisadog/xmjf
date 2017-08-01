@@ -1,0 +1,94 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sky"
+    tools:context=".MainActivity" >
+
+    <!-- 显示头部标题 -->
+
+    <LinearLayout
+        android:id="@+id/headLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" >
+
+        <include layout="@layout/header" />
+    </LinearLayout>
+
+    <com.nangua.xiaomanjflc.widget.FontTextView
+        android:id="@+id/welcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/page_left"
+        android:layout_marginRight="@dimen/page_right"
+        android:layout_marginTop="30dp"
+        
+        android:gravity="center"
+        android:text="欢迎您"
+        android:textColor="@color/white"
+        android:textSize="24sp" />
+
+    <com.nangua.xiaomanjflc.widget.FontTextView
+        android:id="@+id/hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/page_left"
+        android:layout_marginRight="@dimen/page_right"
+        android:layout_marginTop="70dp"
+        
+        android:drawableLeft="@drawable/gesture_icon"
+        android:drawablePadding="@dimen/text_drawable"
+        android:gravity="center"
+        android:text="请绘制解锁密码"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_app" />
+
+    <com.nangua.xiaomanjflc.widget.FontTextView
+        android:id="@+id/operate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/page_bottom"
+        
+        android:gravity="center"
+        android:text="设置手势密码，防止他人未经授权查看。"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_app" />
+
+    <com.nangua.xiaomanjflc.widget.FontTextView
+        android:id="@+id/forget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="70dp"
+        android:layout_marginLeft="40dp"
+        
+        android:gravity="center"
+        android:text="忘记手势密码"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_app" />
+
+    <com.nangua.xiaomanjflc.widget.FontTextView
+        android:id="@+id/transfer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="70dp"
+        android:layout_marginRight="40dp"
+        
+        android:gravity="center"
+        android:text="用其他账号登录"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_app" />
+
+    <FrameLayout
+        android:id="@+id/body_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" >
+    </FrameLayout>
+
+</RelativeLayout>

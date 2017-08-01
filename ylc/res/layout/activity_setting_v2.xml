@@ -1,0 +1,279 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <!-- 显示头部标题 -->
+
+    <LinearLayout
+        android:id="@+id/headLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/header" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/headLinear"
+        android:orientation="vertical" >
+
+        <!--
+        <com.nangua.xiaomanjflc.widget.TitleTab
+        android:id="@+id/mytab"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:background = "@color/white">
+        </com.nangua.xiaomanjflc.widget.TitleTab>
+        -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/headLinear"
+            android:background="@color/white"
+            android:orientation="vertical" >
+            
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/app_bg" />
+
+            <RelativeLayout
+                android:id="@+id/rl_idcard"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="@dimen/page_left"
+                android:paddingRight="@dimen/page_right" >
+
+                <TextView 
+                    android:id="@+id/idcard_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="身份认证"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_app" />
+
+                <TextView 
+                    android:id="@+id/idcard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@+id/idcardimg"
+                    android:ellipsize="end"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_app"
+                    android:text="" />
+                
+                <TextView 
+                    android:id="@+id/idNotValid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@+id/idcardimg"
+                    android:gravity="center"
+                    android:text="未身份认证"
+                    android:textColor="@color/grey"
+                    />
+
+                <ImageView
+                    android:id="@+id/idcardimg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/account_goto"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey" />
+
+            <RelativeLayout
+                android:id="@+id/rl_bankcard"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="@dimen/page_left"
+                android:paddingRight="@dimen/page_right" >
+
+                <TextView 
+                    android:id="@+id/bankcard_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="绑定银行卡"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_app" />
+
+                <TextView 
+                    android:id="@+id/bankcard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="30dp"
+                    android:layout_toRightOf="@id/bankcard_title"
+                    android:ellipsize="end"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_app" />
+                
+                <TextView 
+                    android:id="@+id/bankNotValid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@+id/bankcardimg"
+                    android:gravity="center"
+                    android:text="未绑卡"
+                    android:textColor="@color/grey"
+                    />
+
+                <ImageView
+                    android:id="@+id/bankcardimg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/account_goto" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="@dimen/page_left"
+                android:paddingRight="@dimen/page_right" >
+
+                <TextView 
+                    android:id="@+id/hand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="启用手势密码"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_app" />
+
+                <ImageView
+                    android:id="@+id/handimg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/gesture_close" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey" />
+
+            <RelativeLayout
+                android:id="@+id/rl_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="@dimen/page_left"
+                android:paddingRight="@dimen/page_right" >
+
+                <TextView 
+                    android:id="@+id/pwd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="@string/account_pwd"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_app" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/account_goto" />
+            </RelativeLayout>
+
+            <!-- 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/grey" />
+
+            <RelativeLayout
+                android:id="@+id/aboutus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/page_line"
+                android:paddingLeft="@dimen/page_left"
+                android:paddingRight="@dimen/page_right" >
+
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:drawableLeft="@drawable/more_aboutus"
+                    android:drawablePadding="@dimen/page_drawable"
+                    android:gravity="center_vertical"
+                    android:text="关于"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_app" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/account_goto" />
+            </RelativeLayout>
+             -->
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/text_line"
+            android:background="@color/app_bg"
+            android:paddingLeft="@dimen/page_left"
+            android:paddingRight="@dimen/page_right" >
+
+            <TextView 
+                android:id="@+id/signout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="@dimen/component_btn_v2"
+                android:background="@drawable/btn_blue"
+                android:gravity="center"
+                android:text="@string/signout"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_app" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

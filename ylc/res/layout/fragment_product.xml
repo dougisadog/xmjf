@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/llButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/all"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="全部"
+                android:textColor="@color/blue_v2"
+                android:textSize="@dimen/font_app_v2" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/gain"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <TextView 
+                android:id="@+id/gainTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:text="收益"
+                android:textColor="@color/grey_btn"
+                android:textSize="@dimen/font_app_v2" />
+            
+            <ImageView
+                android:layout_width="5dp"
+                android:layout_height="15dp"
+                android:layout_toRightOf="@+id/gainTitle"
+                android:layout_centerVertical="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_sort_none" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/limitTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <TextView 
+                android:id="@+id/limitTimeTitle"
+               android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="期限"
+                android:textColor="@color/grey_btn"
+                android:textSize="@dimen/font_app_v2" />
+
+            <ImageView
+                android:layout_width="5dp"
+                android:layout_height="15dp"
+                android:layout_toRightOf="@+id/limitTimeTitle"
+                android:layout_centerVertical="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_sort_none" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/singlePurchase"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <TextView 
+                android:id="@+id/singlePurchaseTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="金额"
+                android:textColor="@color/grey_btn"
+                android:textSize="@dimen/font_app_v2" />
+
+            <ImageView
+                android:layout_width="5dp"
+                android:layout_height="15dp"
+                android:layout_toRightOf="@+id/singlePurchaseTitle"
+                android:layout_centerVertical="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_sort_none" />
+        </RelativeLayout>
+
+        <RelativeLayout
+             android:id="@+id/btnSearch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/imgSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_search_off" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView 
+            android:id="@+id/tips"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="————  按默认排序     ————"
+            android:textColor="#cfcfcf"
+            android:textSize="@dimen/font_hint" />
+        
+        <com.louding.frame.widget.KJListView
+            android:id="@+id/listview"
+            android:layout_below="@+id/tips"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:headerDividersEnabled="false"
+            android:footerDividersEnabled="false"
+            android:divider="@color/app_bg"
+            android:dividerHeight="@dimen/component_line_v2" />
+
+        <TextView
+            android:id="@+id/empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="100dp"
+            android:drawableTop="@drawable/empty"
+            android:gravity="center_horizontal"
+            android:text="暂无数据！"
+            android:textSize="20sp"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+</LinearLayout>

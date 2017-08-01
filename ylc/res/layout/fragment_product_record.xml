@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:layout_marginBottom="120dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp" >
+
+ <LinearLayout
+            android:id="@+id/record"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/page_small"
+            android:paddingRight="@dimen/page_small"
+            android:visibility="visible" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/text_line"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/text_line" >
+
+                <com.nangua.xiaomanjflc.widget.FontTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    
+                    android:gravity="center"
+                    android:text="投资人"
+                    android:textColor="@color/font_gray"
+                    android:textSize="@dimen/font_title" />
+
+                <com.nangua.xiaomanjflc.widget.FontTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    
+                    android:gravity="center"
+                    android:text="投资金额"
+                    android:textColor="@color/font_gray"
+                    android:textSize="@dimen/font_title" />
+
+                <com.nangua.xiaomanjflc.widget.FontTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    
+                    android:gravity="center"
+                    android:text="投标时间"
+                    android:textColor="@color/font_gray"
+                    android:textSize="@dimen/font_title" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/app_bg"
+                android:paddingTop="1dp" >
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <com.louding.frame.widget.KJListView
+                        android:id="@+id/listview2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:divider="@color/transparent"
+                        android:dividerHeight="1dp" />
+
+                    <com.nangua.xiaomanjflc.widget.FontTextView
+                        android:id="@+id/empty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="60dp"
+                        
+                        android:drawablePadding="30dp"
+                        android:drawableTop="@drawable/empty"
+                        android:gravity="center"
+                        android:text="暂无数据！"
+                        android:textSize="20sp" />
+                </FrameLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+</LinearLayout>

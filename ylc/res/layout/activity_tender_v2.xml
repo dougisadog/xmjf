@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/mainContent"
+    android:orientation="vertical" >
+
+    <!-- 显示头部标题 -->
+
+    <LinearLayout
+        android:id="@+id/headLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/header" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.nangua.xiaomanjflc.widget.TenderVerticalViewPager
+            android:id="@+id/vp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.nangua.xiaomanjflc.widget.FontTextView 
+            android:id="@+id/buy"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/text_line_v2"
+            android:background="@color/orange"
+            android:gravity="center"
+            android:text="立即投资"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_title" />
+    </RelativeLayout>
+
+</LinearLayout>

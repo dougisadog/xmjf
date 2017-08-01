@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/grey" >
+
+    <RelativeLayout
+        android:id="@+id/rlTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" >
+
+        <com.nangua.xiaomanjflc.widget.FontTextView 
+            android:id="@+id/activityName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="壹财宝0615"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/font_small" />
+
+        <com.nangua.xiaomanjflc.widget.FontTextView 
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/activityName"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="壹财宝0615"
+            android:textColor="@color/font_black"
+            android:textSize="@dimen/font_small" />
+
+        <com.nangua.xiaomanjflc.widget.FontTextView 
+            android:id="@+id/percnt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:text="5,3459/10,0000"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/font_small" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlTitle"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:id="@+id/llgain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal"
+                android:paddingTop="15dp" >
+
+                <com.nangua.xiaomanjflc.widget.FontTextView 
+                    android:id="@+id/gain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="15"
+                    android:textColor="@color/orange"
+                    android:textSize="16sp" />
+
+                <com.nangua.xiaomanjflc.widget.FontTextView 
+                    android:id="@+id/gainCent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="%"
+                    android:textColor="@color/orange"
+                    android:textSize="@dimen/font_small" />
+
+                <LinearLayout
+                    android:id="@+id/add_v"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="visible" >
+
+                    <com.nangua.xiaomanjflc.widget.FontTextView 
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+"
+                        android:textColor="@color/orange"
+                        android:textSize="@dimen/font_small" />
+
+                    <com.nangua.xiaomanjflc.widget.FontTextView 
+                        android:id="@+id/add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="15"
+                        android:textColor="@color/orange"
+                        android:textSize="16sp" />
+
+                    <com.nangua.xiaomanjflc.widget.FontTextView 
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="%"
+                        android:textColor="@color/orange"
+                        android:textSize="@dimen/font_small" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.nangua.xiaomanjflc.widget.FontTextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llgain"
+                android:layout_centerHorizontal="true"
+                android:paddingBottom="15dp"
+                android:text="@string/invest_rate"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/font_small" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/grey" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/confine"
+                android:layout_width="24dp"
+                android:layout_height="32dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_launcher" />
+
+            <LinearLayout
+                android:id="@+id/lldeadline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal"
+                android:paddingTop="15dp" >
+
+                <com.nangua.xiaomanjflc.widget.FontTextView 
+                    android:id="@+id/deadline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textColor="@color/black_v2"
+                    android:textSize="@dimen/font_num" />
+
+                <com.nangua.xiaomanjflc.widget.FontTextView 
+                    android:id="@+id/deadlinedesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="3dp"
+                    android:text="个月"
+                    android:textColor="@color/black_v2"
+                    android:textSize="@dimen/font_small" />
+            </LinearLayout>
+
+            <com.nangua.xiaomanjflc.widget.FontTextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lldeadline"
+                android:layout_centerHorizontal="true"
+                android:paddingBottom="15dp"
+                android:text="@string/limit_title"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/font_small" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item"
+        android:background="@color/white"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <ProgressBar
+            android:id="@+id/percentagepb"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="5"
+            android:max="100"
+            android:progress="40"
+            android:progressDrawable="@drawable/progressbar_orange" />
+
+        <com.nangua.xiaomanjflc.widget.FontTextView 
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:paddingLeft="5dp"
+            android:text="已完成"
+            android:textColor="@color/font_gray"
+            android:textSize="@dimen/font_small" />
+
+        <com.nangua.xiaomanjflc.widget.FontTextView 
+            android:id="@+id/percentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:text="50%"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/font_small" />
+    </LinearLayout>
+
+</RelativeLayout>

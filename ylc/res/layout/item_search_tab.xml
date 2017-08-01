@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_tab"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white" >
+
+    <com.nangua.xiaomanjflc.widget.FontTextView 
+        android:id="@+id/tabName"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/btn_blue"
+        android:gravity="center"
+        android:text="tab"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_hint_small_v2" />
+
+    <ImageView
+        android:id="@+id/tabImg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</FrameLayout>

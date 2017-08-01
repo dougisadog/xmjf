@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="horizontal" >
+
+    <com.nangua.xiaomanjflc.widget.FontTextView
+        android:id="@+id/row_title"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:textAppearance="@android:style/TextAppearance.Medium"
+        android:textColor="@color/font_black" />
+
+    <ImageView
+        android:id="@+id/row_icon"
+        android:layout_width="20dp"
+        android:layout_height="50dp"
+        android:background="@color/app_orange"
+        android:visibility="gone" />
+
+</LinearLayout> <!-- 用于存放列表中的图片和文本。 -->

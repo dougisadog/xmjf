@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:orientation="horizontal"
+    android:layout_marginBottom="120dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp" >
+
+    <com.nangua.xiaomanjflc.widget.SmartScrollView
+        android:id="@+id/sv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/ll_project_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/page_bottom"
+        android:paddingTop="@dimen/page_small"
+        android:visibility="visible" >
+
+
+        <com.nangua.xiaomanjflc.widget.FontTextView 
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="@dimen/page_line"
+            
+            android:lineSpacingMultiplier="1.2"
+            android:textColor="@color/font_gray"
+            android:textSize="@dimen/font_hint" />
+    </LinearLayout>
+    </com.nangua.xiaomanjflc.widget.SmartScrollView>
+
+</LinearLayout>

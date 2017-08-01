@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    android:orientation="vertical" >
+    
+        <com.nangua.xiaomanjflc.widget.TitleTab
+        android:id="@+id/mytab"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/page_top"
+                android:layout_marginBottom="@dimen/page_bottom"
+                android:background = "@color/white">
+        </com.nangua.xiaomanjflc.widget.TitleTab>
+        
+        <com.nangua.xiaomanjflc.widget.MyViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="40dp"
+            android:layout_above="@id/tabwidget"
+            android:background="@color/white" />
+
+</LinearLayout>

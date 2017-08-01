@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg" >
+
+    <!-- 显示头部标题 -->
+
+    <LinearLayout
+        android:id="@+id/headLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/header" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/headLinear"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/page_top" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/page_left"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp" >
+            
+            <ImageView 
+                android:id="@+id/imgName"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/account_username"/>
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/imgName"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="@string/idcard_name"
+                android:singleLine="true"
+                android:textColor="@color/black_v2"
+                android:textColorHint="@color/font_hint"
+                android:textSize="@dimen/font_hint_v2" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="@dimen/component_line_v2"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/page_left"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp" >
+            
+             <ImageView 
+                android:id="@+id/imgId"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:src="@drawable/account_idcard"/>
+
+            <EditText
+                android:id="@+id/id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/imgId"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="@string/idcard_id"
+                android:singleLine="true"
+                android:textColor="@color/black_v2"
+                android:textColorHint="@color/font_hint"
+                android:textSize="@dimen/font_hint_v2" />
+        </RelativeLayout>
+
+        <com.nangua.xiaomanjflc.widget.FontTextView
+            android:id="@+id/hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/idcard_hint"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/font_smaller_v2_p" />
+
+        <com.nangua.xiaomanjflc.widget.FontTextView
+            android:id="@+id/post"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="@dimen/component_btn_v2"
+            android:background="@drawable/btn_blue"
+            android:gravity="center"
+            android:text="@string/btn_submit"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_app" />
+    </LinearLayout>
+
+</RelativeLayout>

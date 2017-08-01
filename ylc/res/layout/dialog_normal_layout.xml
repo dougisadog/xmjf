@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="20dp" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|right|top"
+            android:src="@drawable/iconfont_cancel"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <com.nangua.xiaomanjflc.widget.FontTextView
+                android:id="@+id/message"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                
+                android:gravity="center"
+                android:lineSpacingMultiplier="1.5"
+                android:minHeight="80dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textColor="#ff7725" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/positiveButton"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@color/app_blue"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_app" />
+    </LinearLayout>
+
+</FrameLayout>
